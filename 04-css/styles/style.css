@@ -86,4 +86,6 @@ h1 {
     display: inline (elemento ocupa solo el espacio necesario y puede tener elementos al lado)
 
     */
+
+    display: inline;
 }
