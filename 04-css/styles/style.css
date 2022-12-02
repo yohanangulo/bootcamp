@@ -1,28 +1,72 @@
 /* Resetiar algunos valores por defecto del navegador */
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 /* De esta manera se agregan comentarios en CSS */
 
 /* Asi se seleccionan las etiquetas por el id */
-#hola{
-    font-size: 100px;
-    line-height: 1;
+#hola {
+  font-size: 100px;
+  line-height: 1;
 }
 
 /* Para selectionar etiquetas por el nombre de la etiqueta */
-p{
-    font-family: Arial, Helvetica, sans-serif;
+p {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-#primer{
-    background: green;
+#primer {
+  background: green;
 }
 
 /* Para seleccionar por clase se coloca un punto al inicio del nombre */
-.titular{
-     background: red;
+.titular {
+  background: red;
+
+  /* margen: distancia entre un elemento y otro */
+  margin: 50px 0 20px 10px;
+
+  /* padding: distancia entre la caja y su contenido */
+  padding: 30px 10px 0 0;
+
+  /* Para el padding y para el margin:
+  cuando se ponen solo un valor se aplicara para todas las direcciones,
+    cuando se ponen dos valores el primero significa arriba y abajo, 
+    cuando se colocan los cuatro se especifica de la siguiente manera -> arriba, derecha, abajo, izquierda */
 }
+
+/* selector universal: '*' selecciona todas las etiquetas */
+
+/* acontinuacion algunas propiedades */
+
+/* Para selecionar varios tipos de etiquetas se coloca una coma ',' */
+
+p,
+h1 {
+    /* Color de texto */
+    color: springgreen;
+
+    /* tama#o de la letra */
+    font-size: 50px;
+
+    /* Grosor de la letra */
+    font-weight: 900;
+
+    /* Ancho de la cajo */
+    width: 250px;
+
+    /* Alto de la cajo */
+    height: 400px;
+
+    /* Bordes exteriores de la caja */
+    border: 5px;
+    border-style: solid;
+    border-color: blueviolet;
+
+    /* tambien tenemos lo que se llama un shorthand que es para asignar varian propiedades en una sola instruccion */
+    border: 5px solid blueviolet;
+}
+
