@@ -70,3 +70,20 @@ h1 {
     border: 5px solid blueviolet;
 }
 
+body{
+    background-image: url('../img/perrito.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+div,
+p,
+h1 {
+    /* El display define como se muestran los elementos o si se muestran
+    
+    display: block (elemento ocupa todo una linea)
+    display: inline (elemento ocupa solo el espacio necesario y puede tener elementos al lado)
+
+    */
+}
