@@ -1,14 +1,19 @@
+/* Resetiar algunos valores por defecto del navegador */
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+/* De esta manera se agregan comentarios en CSS */
+
+/* Asi se seleccionan las etiquetas por el id */
 #hola{
     font-size: 100px;
     line-height: 1;
 }
 
+/* Para selectionar etiquetas por el nombre de la etiqueta */
 p{
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -17,6 +22,7 @@ p{
     background: green;
 }
 
+/* Para seleccionar por clase se coloca un punto al inicio del nombre */
 .titular{
      background: red;
 }
