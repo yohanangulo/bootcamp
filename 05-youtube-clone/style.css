@@ -3,34 +3,27 @@
     margin: 0;
     box-sizing: border-box;
 }
-
-#nav{
-    height: 56px;
-    padding: 0 16px;
-    width: 100%;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
+body {
+  background: #0f0f0f;
 }
 
-#start{
-    display: flex;
-    flex-direction: row;
-
+#start {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-yt-icon, ytd-topbar-logo-renderer{
-    display: flex;
-    align-items: center;
-    vertical-align: middle;
+nav {
+  display: flex;
+  flex-direction: row;
+  height: 56px;
+  padding: 0 16px;
 }
 
-.menu-button{
-    background: #fff;;
-    border: none;
-    padding: 8px;
+.menu-icon {
+  padding: 8px;
 }
 
-#logo-icon{
-    padding-left: 16px;
+.logo {
+  padding: 18px 14px 18px 16px;
 }
