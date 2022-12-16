@@ -5,3 +5,79 @@
     RGBA (red, green, blue, alpha)
     Hexadecimal
 */
+
+
+
+
+/* PSEUDO CLASES */
+
+/* PARA LAS PSEUDOCLAES SUS UNA SOLA VEZ DOS PUNTOS */
+
+/* manejan los estilos de un estado de ut elemento html
+Ejemplo, al estar en un elemento o posicionar el mouse encima de un elemento */
+
+button{
+    color: #000;
+    width: 150px;
+    height: 60px;
+}
+
+button:focus{
+    outline: 1px solid red;
+}
+
+/* Para cuando esta  un cuadro de texto */
+
+
+
+button:hover{
+    background: red;
+    cursor: pointer;
+    height: 100px;
+    width: 100px;
+}
+
+/* para cuando un input esta enfocado */
+
+input:focus{
+    outline: 3px solid red;
+}
+
+
+
+
+
+/* PSEUDO-ELEMENTOS */
+/* SE UTILZAN DOS VECES DOS PUNTOS PARA USARLAS */
+
+p::after{
+    content: 'Esto es un after ';
+}
+
+p::before{
+    content: 'Esto es un before ';
+}
+
+
+
+
+
+/* ANIMACIONES Y TRANSIONES */
+/* DEBE TENER UN VALOR INICIAL PARA QUE FUNCIONE */
+
+.test-trans{
+    width: 50%;
+    min-height: 500px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button{
+    transition: width 250ms, height 350ms;
+
+}
+
+/* Animaciones */
