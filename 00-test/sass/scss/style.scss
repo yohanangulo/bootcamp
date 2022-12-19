@@ -1,3 +1,22 @@
-body{
-    padding: 0;
+@use "globals";
+@use "util";
+
+nav {
+  background: steelblue;
+  padding: 0 20px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  max-width: 800px;
+  display: inline-block;
+  height: 100px;
+  line-height: 100px;
+  width: 500px;
+  margin-inline: auto;
+  background: blue;
+  margin: auto;
+  text-align: center;
 }

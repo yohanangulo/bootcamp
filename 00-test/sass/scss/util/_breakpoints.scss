@@ -1,0 +1,15 @@
+// 700px, 900px, 1440px
+
+// Para media queries la unidad relativa del em es calculada con el tamano de la fuente por defecto del navegado 16px = 1 em
+
+$breakpoints-up: (
+  "medium": 43.75em,
+  "large": 56.25em,
+  "xlarge": 90em
+);
+
+@mixin breakpoint($size) {
+  @media (min-width: get-map($breakpoints-up, $size)) {
+    @content;
+  }
+}
