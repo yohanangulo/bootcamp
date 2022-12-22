@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Netflix Sans';
+  font-weight: 900;
+  font-style: normal;
+  src: url(../../fonts/NetflixSansBlack.ttf);
+}
+
+@font-face {
+  font-family: 'Netflix Sans';
+  font-weight: 100;
+  font-style: normal;
+  src: url(../../fonts/NetflixSansThin.ttf);
+}
+
+@font-face {
+  font-family: 'Netflix Sans';
+  font-weight: 400;
+  font-style: normal;
+  src: url(../../fonts/NetflixSansRegular.ttf);
+}
+
+body {
+  font-family: 'Netflix Sans';
+  color: var(--text-color);
+  font-weight: 400;
+}

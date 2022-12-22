@@ -1,0 +1,52 @@
+header {
+
+  .sign-in {
+
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: norma;
+    padding: 7px 17px;
+    background: var(--btn-primary);
+    border-radius: 3px;
+  }
+
+  .lang-btn {
+    display: inline-block;
+    position: relative;
+    outline: 1px solid #aaa;
+    padding: 0.44rem 1.57rem;
+    border-radius: 2px;
+    margin-right: 2rem;
+
+
+    span {
+      font-size: 0.875rem;
+      line-height: 1.3em;
+      position: relative;
+
+      &:after {
+
+        content: '';
+        width: 5px;
+        height: 5px;
+        border: 5px solid #fff;
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+        border-left-color: transparent;
+        position: absolute;
+        top: 0;
+        transform: translate(5px, 60%);
+      }
+
+      
+      i {
+        position: absolute;
+        font-size: .75rem;
+        top: 50%;
+        transform: translate(-16px, -53%);
+      }
+    }
+    
+  }
+
+}
