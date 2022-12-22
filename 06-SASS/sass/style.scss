@@ -75,3 +75,30 @@ nav {
   @include change-bg(green);
 }
 
+// Conditionals
+
+@mixin color ($text-color){
+
+  @if ( $text-color == black ) or ($text-color == blue){
+    
+    color: white;
+
+  } @else if ($text-color == red){
+    
+    color: #0f0f0f;
+
+  } @else{
+
+    color: blue;
+
+  }
+  
+  background: $bg;
+  
+}
+
+.mixin-test{
+
+  @include color(blue)
+
+}
