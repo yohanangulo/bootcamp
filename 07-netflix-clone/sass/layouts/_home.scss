@@ -1,3 +1,7 @@
+section {
+  border-bottom: 8px solid #222;
+}
+
 .hero{
   min-height: 700px;
   background: url('https://assets.nflxext.com/ffe/siteui/vlv3/d0a0affb-1c76-4cf0-9d75-eb531f32458c/67c60e8b-3443-4e83-955a-95ba0a24573e/VE-en-20221214-popsignuptwoweeks-perspective_alpha_website_small.jpg');
@@ -27,4 +31,157 @@
   }
 }
 
+h1 {
+  max-width: 600px;
+  text-align: center;
+  margin-inline: auto;
+}
 
+
+.hero-card {
+  padding: 70px 45px;
+}
+
+.hero-text {
+  max-width: 950px;
+  margin-inline: auto;
+  padding: 75px 0;
+  text-align: center;
+}
+
+h2 {
+  margin: 1rem auto;
+}
+
+h3 {
+  padding-bottom: 20px;
+  padding-inline: 5%;
+}
+
+.section-card {
+  padding: 70px 45px;
+}
+
+.card-container__text {
+
+  h1 {
+    
+    text-align: left;
+    margin-bottom: 0.5rem;
+    
+  }
+
+}
+
+.card-container {
+
+  &__text {
+    
+    padding-right: 3rem;
+    width: 52%;
+    margin: -5% 0;
+    flex: 0 1 auto;
+    box-sizing: content-box;
+
+
+    @media (max-width: 780px) {
+    
+      padding: 0 !important;
+      width: 80%;
+      margin-bottom: 40px;
+      text-align: center;
+
+      h1 {
+
+        text-align: center;
+
+      }
+
+    }
+
+  }
+
+  &__video {
+    width: 48%;
+    display: flex;
+    flex: 0 1 auto;
+
+
+    @media (max-width: 780px) {
+    
+      width: 100%;
+      
+    }
+
+  }
+
+  &__video--animation {
+
+    position: relative;
+    margin: -10% -5% -5% 0;
+
+    img {
+      position: relative;
+      z-index: 2000;
+    }
+
+  }
+
+  &__video--container {
+
+    z-index: 1000;
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    max-height: 54%;
+    max-width: 73%;
+    top: 46%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    
+  }
+
+
+}
+
+.watch-one-device .card-container__video--container {
+  height: 100%;
+  left: 50%;
+  max-height: 47%;
+  max-width: 63%;
+  position: absolute;
+  top: 34%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+}
+
+.download-and-watch {
+  width: 100%;
+  margin: -8% 0 -4% -15%;
+
+  @media (max-width: 780px) {
+  margin: 0;
+  }
+
+}
+
+.flipped {
+
+  flex-direction: row-reverse;
+
+  @media (max-width: 780px) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-container__text {
+
+    padding: 0 0 0 3rem;
+      
+  }
+  
+}
+
+body {
+  color: $colorcito;
+}

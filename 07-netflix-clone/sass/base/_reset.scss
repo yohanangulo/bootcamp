@@ -7,9 +7,15 @@
   font: inherit;
 }
 
+$colorcito: #fff; 
+
+body {
+  background-color: var(--bg-color);
+}
+
 img, picture, svg, video {
   display: block;
-  min-width: 100%;
+  max-width: 100%;
 }
 
 a, a:visited {

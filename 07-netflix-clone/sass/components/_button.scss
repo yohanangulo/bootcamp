@@ -1,3 +1,24 @@
+.btn-primary {
+
+  all: unset;
+  background: var(--btn-primary);
+  cursor: pointer;
+  min-height: 60px;
+  font-size: 1.625rem;
+
+  &:hover {
+    background: var(--btn-primary-hover);
+  }
+  
+  @media (max-width: 780px) {
+  
+    font-size: 16px;
+    min-height: 40px;
+
+  }
+
+}
+
 header {
 
   .sign-in {
@@ -17,7 +38,7 @@ header {
     padding: 0.44rem 1.57rem;
     border-radius: 2px;
     margin-right: 2rem;
-
+    background: var(--overlay-color);
 
     span {
       font-size: 0.875rem;
@@ -44,6 +65,11 @@ header {
         font-size: .75rem;
         top: 50%;
         transform: translate(-16px, -53%);
+
+        &::before {
+          vertical-align: middle;
+        }
+        
       }
     }
     
