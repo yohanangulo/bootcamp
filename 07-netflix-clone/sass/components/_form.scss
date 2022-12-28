@@ -1,0 +1,60 @@
+.form {
+  max-width: 950px;
+  padding-top: 0.85rem;
+  display: flex;
+  flex-direction: column;
+
+  h3 {
+    margin: 0 auto;
+  }
+
+  .email-address {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 780px) {
+      flex-direction: column;
+    }
+
+    input {
+      all: unset;
+      box-sizing: border-box;
+      background: #fff;
+      color: #000;
+      text-align: left;
+      padding-left: 10px;
+      min-width: 450px;
+      height: 60px;
+      
+      &::placeholder {
+        all: unset;
+        font-size: 1rem;
+        color: var(--place-holder);
+      }
+      
+    }
+
+    button {
+      display: inline-flex;
+      flex-direction: row;
+      padding: 0 1em;
+      align-items: center;
+    }
+
+    svg {
+      height: 0.8em;
+      margin: 0 0 0 .5em;
+    }
+
+    .btn-cta-container {
+      font-size: 1.625rem;
+
+      @media (max-width: 780px) {
+        margin-top: 20px;
+      }
+    }
+
+  }
+
+}
