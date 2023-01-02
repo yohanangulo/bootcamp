@@ -28,6 +28,11 @@
   src: url(../../fonts/NetflixSansBlack.ttf);
 }
 
+@font-face {
+  font-family: nf-icon;
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/nf-icon-v1-93.woff);
+}
+
 body {
   font-family: 'Netflix Sans';
   color: var(--text-color);
@@ -46,13 +51,4 @@ h2 {
 
 h3 {
   font-size: 1.2rem;
-}
-
-html{
-
-  @media (max-width: 780px) {
-  
-    font-size: 13px;
-
-  }
 }

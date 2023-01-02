@@ -1,3 +1,5 @@
+@use '../abstracts' as a;
+
 section {
   border-bottom: 8px solid #222;
 }
@@ -10,6 +12,10 @@ section {
   background-size: cover;
   position: relative;
   z-index: 1000;
+
+  @include a.bp(sm) {
+    min-height: 508px;
+  }
 
   &:before{
     content: '';
@@ -28,6 +34,7 @@ section {
   .container{
     position: relative;
     z-index: 2000;
+    max-width: 1920px !important;
   }
 }
 
@@ -35,11 +42,24 @@ h1 {
   max-width: 600px;
   text-align: center;
   margin-inline: auto;
+
+  @include a.bp(md) {
+    max-width: none;
+  }
+
+  @include a.bp(sm) {
+    font-size: 1.75rem;
+  }
+  
 }
 
 
 .hero-card {
   padding: 70px 45px;
+
+  @include  a.bp(sm) {
+    padding: 50px 5%;
+  }
 }
 
 .hero-text {
@@ -47,33 +67,35 @@ h1 {
   margin-inline: auto;
   padding: 75px 0;
   text-align: center;
-}
 
-h2 {
-  margin: 1rem auto;
-}
-
-h3 {
-  padding-bottom: 20px;
-  padding-inline: 5%;
-}
-
-.section-card {
-  padding: 70px 45px;
-}
-
-.card-container__text {
-
-  h1 {
-    
-    text-align: left;
-    margin-bottom: 0.5rem;
-    
+  @include a.bp(sm) {
+    padding: 30px 0;
   }
 
 }
 
+h2 {
+  margin: 1rem auto;
+
+  @include a.bp(sm) {
+    font-size: 1.125rem;
+  }
+
+}
+
+.section-card {
+  padding: 70px 45px;
+
+  
+  @include a.bp(sm) {
+    padding: 50px 5%;
+  }
+
+}
+
+
 .card-container {
+
 
   &__text {
     
@@ -82,23 +104,54 @@ h3 {
     margin: -5% 0;
     flex: 0 1 auto;
     box-sizing: content-box;
-
-
-    @media (max-width: 780px) {
+    
+    
+    @include a.bp(md) {
     
       padding: 0 !important;
-      width: 80%;
-      margin-bottom: 40px;
+      width: 100%;
+      margin: 0;
       text-align: center;
-
-      h1 {
-
-        text-align: center;
-
-      }
 
     }
 
+    @include a.bp(sm) {
+      margin: 0;
+    }
+    
+
+    h1 {
+      
+      text-align: left;
+      margin-bottom: 0.5rem;
+      
+      @include a.bp(md) {
+        text-align: center;
+        font-size: 2.5rem;
+      }
+      
+      @include a.bp(sm) {
+        font-size: 1.625rem;
+      }
+      
+    }
+
+    h2 {
+      @include a.bp(md) {
+        font-size: 1.25rem;
+      }
+
+      
+      @include a.bp(sm) {
+        font-size: 1.125rem;
+      }
+
+    }
+    
+  }
+
+  &__text-h2 {
+    margin: .75em 0 .25em;
   }
 
   &__video {
@@ -107,10 +160,11 @@ h3 {
     flex: 0 1 auto;
 
 
-    @media (max-width: 780px) {
-    
+    @include a.bp(md) {
       width: 100%;
-      
+      max-width: 600px;
+      overflow: hidden;
+      margin-top: 1em;
     }
 
   }
@@ -119,6 +173,10 @@ h3 {
 
     position: relative;
     margin: -10% -5% -5% 0;
+
+    @include a.bp(md) {
+      margin: -10% auto 0;
+    }
 
     img {
       position: relative;
@@ -141,6 +199,20 @@ h3 {
     
   }
 
+  &__video-watch-everywhere {
+
+    @include a.bp(md) {
+      margin: -5% auto 0;
+      
+    }    
+  }
+
+  &__video_ov {
+    @include a.bp(md) {
+      overflow: visible;
+    }
+  }
+
 
 }
 
@@ -159,7 +231,7 @@ h3 {
   width: 100%;
   margin: -8% 0 -4% -15%;
 
-  @media (max-width: 780px) {
+  @include a.bp(md) {
   margin: 0;
   }
 
@@ -169,11 +241,20 @@ h3 {
 
   flex-direction: row-reverse;
 
-  @media (max-width: 780px) {
+  @include a.bp(md) {
     display: flex;
     flex-direction: column;
   }
 
+  .card-container__download-and-watch-img {
+
+    @include a.bp(md) {
+      margin-inline: auto;
+      margin-top: -8%;
+    }
+
+  }
+  
   .card-container__text {
 
     padding: 0 0 0 3rem;
@@ -182,6 +263,91 @@ h3 {
   
 }
 
-body {
-  color: $colorcito;
+// download card animation
+
+.download-card-animation {
+  box-sizing: content-box;
+  display: flex;
+  align-items: center;
+  background: #000;
+  padding: 0.5em 0.75em;
+  border: 2px solid hsla(0,0%,100%,.25);
+  width: 60%;
+  min-width: 15em;
+  border-radius: 0.75em;
+  position: absolute;
+  z-index: 3000;
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 2em 0 #000;
+
+  @include a.bp(md) {
+    padding-top: .35em ;
+    padding-bottom: .35em ;
+  }
+
+  &__image {
+    margin-right: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+
+  }
+
+  &__img {
+    display: inline;
+    box-sizing: content-box;
+    height: 4.5em;
+
+    @include a.bp(md) {
+      height: 4em;
+    }
+
+    
+    @include a.bp(sm) {
+      height: 3em;
+    }
+
+  }
+  
+  &__text {
+    flex: 1 1;
+    margin: 0.3em 0;
+  }
+
+  &__gif {
+    background: url(https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif) 50% no-repeat;
+    background-size: 100%;
+    height: 3.75em;
+    width: 3em;
+    content: '';
+
+    @include a.bp(sm) {
+      height: 3em;
+    }
+
+  }
+
+  &__text-1 {
+    font-weight: 500;
+    font-size: 1em;
+
+    @include a.bp(sm) {
+      font-size: 0.9em;
+    }
+
+  }
+
+  &__text-2 {
+    font-size: 0.9em;
+    font-weight: 400;
+    color: #0071eb;
+
+    @include a.bp(sm) {
+      font-size: 0.75em;
+    }
+    
+  }
 }
+
+// ends download card animation

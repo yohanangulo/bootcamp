@@ -1,7 +1,11 @@
+@use '../abstracts' as a;
+
 .container {
   max-width: 1290px;
   margin-inline: auto;
 }
+
+
 
 .card-container {
   
@@ -10,18 +14,12 @@
   align-items: center;
   margin: 0 auto;
   max-width: 1100px;
-  
-  
-
-    
-  
-  
 }
 
 
 
 
-@media (max-width: 780px) {
+@include a.bp(md) {
   
   .card-container {
 

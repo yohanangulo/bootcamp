@@ -7,9 +7,29 @@ console.log('Hola desde otro archivo');
 // Variables
 // son contenedores de informacion
 
+// var son variables globales
 var x = 6;
 var y = 7;
 var resultado = x + y;
+
+// let son variables locales
+let h = 'hola';
+
+//const son constantes que tienen un alcance local
+const pi = 3.14;
+
+
+// Ejemplos de alcance
+
+if (true) {
+  var global = "variable global";
+  let local = "variable local"; // no existe fuera de este bloque de codigo
+  const pi2 = 3.14; // son constantes y no se pueden cambiar mas dentro del codigo, tienen el mismo alcance que let
+}
+
+console.log(global);
+console.log(local); // esta variable aqui no existe
+
 
 // tipos de datos
 x = 1; //int (numero entero)
@@ -62,8 +82,74 @@ x = [['elemento11', 'elemento12'], ['elemento21', 'elemento22']];
 // condicionales
 // estos nos permiten tomar desciones
 
-if (4 <= 2) {
+var num1 = 2;
+var mun2 = '2';
+
+if (num1 <= mun2) {
   console.log('La condicion se cumplio');
+
+} else if (num1 != num2){
+  console.log("hola");
+
+} else if (num1 === num2) {
+  console.log("son exactamente iguales");
+
 } else {
   console.log('La condicion no se cumplio');
+
 }
+
+/**
+ * = signo de asignacion
+ * == signo de comparacion
+ * === signo de comparacion exacta
+ * <= menor o igual que
+ * >= mayor o iguar que
+ * < menor que
+ * > mayor que
+ */
+
+
+// condicionales con operadores logicos
+
+var dinero = 100;
+var tiempo = true;
+
+if (tiempo && (dinero => 100)) { // operador logicon 'and'
+  console.log('hoy se sale');
+
+}
+
+if (tiempo || (dinero => 100)) {
+  console.log("hoy se sale");
+  
+}
+
+if (!tiempo) {
+  console.log("")
+  
+}
+
+ganas = true
+dinero = 100
+tiempo = true
+
+if (ganas && (tiempo || dinero < 100)) { // Primero se evaluan los signos de comparacion
+  console.log('Se evaluan primero los signos de comparacion')
+}
+
+var text = ""
+x = 0;
+
+switch (x) {
+  case 0:
+    text = "Off";
+    break;
+  case 1:
+    text = "On";
+    break;
+  default:
+    text = "No value found";
+}
+
+console.log(text);

@@ -1,60 +1,112 @@
-.form {
-  max-width: 950px;
-  padding-top: 0.85rem;
-  display: flex;
-  flex-direction: column;
+@use '../abstracts' as a;
 
-  h3 {
+.form-container {
+  
+  padding-top: .85rem;
+
+  @include a.bp(md) {
+    padding-top: 0;
+  }
+
+  &__title {
     margin: 0 auto;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-inline: 5%;
+
+    @include a.bp(md) {
+      box-sizing: content-box;
+      font-size: 23px;
+      max-width: 450px;
+      padding-inline: 10%;
+      padding-bottom: 10px;
+    }
+
+    @include a.bp(sm) {
+      font-size: 18px;
+    }
+
+    @media (max-width: 399px) {
+    padding-inline: 5%;
+    padding-bottom: 10px;
+
+    }
+
   }
 
-  .email-address {
+  
+  .form {
+    max-width: 950px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    margin-inline: auto;
+    margin-bottom: 10px;
+    text-align: center;
 
-    @media (max-width: 780px) {
-      flex-direction: column;
+    @include a.bp(md) {
+      // padding: 0 10%;
+      // max-width: 450px;
+      font-size: 18px;
     }
 
-    input {
-      all: unset;
-      box-sizing: border-box;
-      background: #fff;
-      color: #000;
-      text-align: left;
-      padding-left: 10px;
-      min-width: 450px;
-      height: 60px;
-      
-      &::placeholder {
-        all: unset;
-        font-size: 1rem;
-        color: var(--place-holder);
-      }
-      
-    }
-
-    button {
-      display: inline-flex;
-      flex-direction: row;
-      padding: 0 1em;
+    .email-address {
+      display: flex;
+      justify-content: center;
       align-items: center;
-    }
 
-    svg {
-      height: 0.8em;
-      margin: 0 0 0 .5em;
-    }
-
-    .btn-cta-container {
-      font-size: 1.625rem;
-
-      @media (max-width: 780px) {
-        margin-top: 20px;
+      @include a.bp(md) {
+        flex-direction: column;
       }
+
+      input {
+        all: unset;
+        box-sizing: border-box;
+        background: #fff;
+        color: #000;
+        text-align: left;
+        padding-left: 10px;
+        min-width: 450px;
+        height: 60px;
+
+        @include a.bp(md) {
+          width: 100%;
+          max-width: 500px;
+          height: 48px;
+        }
+
+        @include a.bp(sm) {
+          min-width: auto;
+        }
+        
+        &::placeholder {
+          all: unset;
+          font-size: 1rem;
+          color: var(--place-holder);
+        }
+        
+      }
+
+      button {
+        display: inline-flex;
+        flex-direction: row;
+        padding: 0 1em;
+        align-items: center;
+      }
+
+      svg {
+        height: 0.8em;
+        margin: 0 0 0 .5em;
+      }
+
+      .btn-cta-container {
+        font-size: 1.625rem;
+
+        @include a.bp(md) {
+          margin-top: 15px;
+        }
+      }
+
     }
 
   }
-
 }

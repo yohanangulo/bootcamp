@@ -1,0 +1,81 @@
+@use '../abstracts' as a;
+
+.faq {
+  
+  @include a.bp(sm) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &__title {
+    max-width: none;
+    margin-bottom: 0.5rem;
+
+    @include a.bp(md) {
+      font-size: 2.5rem;
+    }
+
+    @include a.bp(sm) {
+      font-size: 1.65rem;
+      padding-left: 5%;
+      padding-right: 5%;
+      margin-bottom: 0.5rem;
+    }
+
+  }
+
+  &__ul {
+    width: 75%;
+    max-width: 815px;
+    margin: 2em auto;
+    font-size: 1.625rem;
+
+    @include a.bp(md) {
+      width: 90%;
+      font-size: 1.25rem;
+      margin: 1.5em auto;
+    }
+
+    @include a.bp(sm) {
+      margin: 1.25em auto;
+      font-size: 1.125rem;
+      width: auto;
+    }
+
+  }
+
+  &__li {
+    list-style: none;
+    margin: 0 0 8px;
+  }
+  
+  &__span {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding: .8em 2.2em calc(.8em + 1px) 1.2em;
+    margin-bottom: 1px;
+    background: #303030;
+  }
+
+  .svg-icon {
+    position: absolute;
+    height: 1em;
+    width: 1em;
+    fill: #fff;
+    top: 50%;
+    right: 1em;
+    transform: translateY(-50%) rotate(-45deg);
+
+  }
+
+
+  .form-container {
+    @include a.bp(sm) {
+      padding-inline: 5%;
+
+    }
+  }
+
+
+}
