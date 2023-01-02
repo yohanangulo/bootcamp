@@ -7,6 +7,10 @@
   font: inherit;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   background-color: var(--bg-color);
 }
@@ -413,6 +417,9 @@ h2 {
   cursor: pointer;
   min-height: 60px;
   font-size: 1.625rem;
+}
+.btn-primary span {
+  white-space: nowrap;
 }
 .btn-primary:hover {
   background: var(--btn-primary-hover);

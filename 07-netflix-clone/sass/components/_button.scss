@@ -10,6 +10,10 @@
   min-height: 60px;
   font-size: 1.625rem;
 
+  span {
+    white-space: nowrap;
+  }
+
   &:hover {
     background: var(--btn-primary-hover);
   }
