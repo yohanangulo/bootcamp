@@ -1,0 +1,1 @@
+let op = (char = '') => calc.dis.value += char;

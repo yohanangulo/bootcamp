@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=., initial-scale=1.0" />
+    <title>Calculadora</title>
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="calculadora.js"></script>
+    
+  </head>
+  <body class="p-8">
+    <div class="px-8 py-4 flex flex-col gap-6 bg-blue-700 rounded-xl">
+      <p id="resultado" class="bg-black text-white rounded-2xl py-2 px-4 flex justify-end">Resultado</p>
+      <div class="grid grid-cols-4 gap-4">
+        <button onclick="calculadora('7')" class="bg-blue-400 rounded-2xl px-3 py-1">7</button>
+        <button onclick="calculadora('8')" class="bg-blue-400 rounded-2xl px-3 py-1">8</button>
+        <button onclick="calculadora('9')" class="bg-blue-400 rounded-2xl px-3 py-1">9</button>
+        <button onclick="calculadora('/')" class="bg-blue-400 rounded-2xl px-3 py-1">/</button>
+
+        <button onclick="calculadora('4')" class="bg-blue-400 rounded-2xl px-3 py-1">4</button>
+        <button onclick="calculadora('5')" class="bg-blue-400 rounded-2xl px-3 py-1">5</button>
+        <button onclick="calculadora('6')" class="bg-blue-400 rounded-2xl px-3 py-1">6</button>
+        <button onclick="calculadora('*')" class="bg-blue-400 rounded-2xl px-3 py-1">*</button>
+
+        <button onclick="calculadora('1')" class="bg-blue-400 rounded-2xl px-3 py-1">1</button>
+        <button onclick="calculadora('2')" class="bg-blue-400 rounded-2xl px-3 py-1">2</button>
+        <button onclick="calculadora('3')" class="bg-blue-400 rounded-2xl px-3 py-1">3</button>
+        <button onclick="calculadora('+')" class="bg-blue-400 rounded-2xl px-3 py-1">+</button>
+
+        <button onclick="calculadora('0')" class="bg-blue-400 rounded-2xl px-3 py-1">0</button>
+        <button onclick="calculadora('-')" class="bg-blue-400 rounded-2xl px-3 py-1">-</button>
+        <button onclick="borrar()" class="bg-blue-400 rounded-2xl px-3 py-1">Del</button>
+        <button onclick="resultado()" class="bg-blue-400 rounded-2xl px-3 py-1">=</button>
+
+        <button onclick="calculadora(',')" class="bg-blue-400 rounded-2xl px-3 py-1">,</button>
+        <button onclick="calculadora('.')" class="bg-blue-400 rounded-2xl px-3 py-1">.</button>
+      </div>
+    </div>
+  </body>
+</html>

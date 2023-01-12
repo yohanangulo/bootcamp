@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculador</title>
+
+  <!-- css -->
+  <link rel="stylesheet" href="dist/main.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <section class="bg-gray-900 h-screen min-h-[450px] flex items-end md:items-center justify-center md:bg-gradient-to-r md:from-pink-300 md:via-purple-300 md:to-indigo-400">
+
+    <!-- calculator -->
+    <form name="calc" class="bg-membran grid grid-cols-4 w-screen h-full max-h-[500px] gap-[2px] md:w-[500px] md:rounded-xl overflow-hidden md:shadow-2xl md:bg-transparent">
+      
+      <!-- display -->
+      <input readonly type="text" name="dis" class="col-span-full md:pt-5 text-4xl -mt-1  text-white bg-gray-900 text-right px-3 md:bg-gray-900/[.8]">
+      
+      <!-- keys -->
+      
+      <!-- 1st row -->
+      <button onclick="op('+')" type="button" class="bg-color-operadores">+</button>
+      <button onclick="op('-')" type="button" class="bg-color-operadores">-</button>
+      <button onclick="op('*')" type="button" class="bg-color-operadores">&times;</button>
+      <button onclick="op('/')" type="button" class="bg-color-operadores">&divide;</button>
+      
+      <!-- 2nd row -->
+      <button onclick="op('7')" type="button" class="bg-numeros">7</button>
+      <button onclick="op('8')" type="button" class="bg-numeros">8</button>
+      <button onclick="op('9')" type="button" class="bg-numeros">9</button> 
+      <button onclick="calc.dis.value = op().slice(0, -1)" type="button" class="bg-numeros">DEL</button>
+
+      <!-- 3rd row -->
+      <button onclick="op('4')" type="button" class="bg-numeros">4</button>
+      <button onclick="op('5')" type="button" class="bg-numeros">5</button>
+      <button onclick="op('6')" type="button" class="bg-numeros">6</button>
+
+      <!-- 4th row -->
+      <button onclick="op('1')" type="button" class="bg-numeros">1</button>
+      <button onclick="op('2')" type="button" class="bg-numeros">2</button>
+      <button onclick="op('3')" type="button" class="bg-numeros">3</button>
+
+      <!-- 5th row -->
+      <button onclick="op('0')" type="button" class="bg-numeros">0</button>
+      <button onclick="op('.')" type="button" class="bg-numeros">.</button>
+      <button onclick="calc.dis.value = ''" type="button" class="bg-numeros">AC</button>
+      
+      <!-- equal button -->
+      <button onclick="calc.dis.value = eval(op())" type="button" class="bg-naranja-pastel row-start-4 col-start-4 row-end-7">=</button>
+
+    </form>
+  </section>
+
+
+  <!-- JavaScript -->
+  <script src="main.js"></script>
+
+</body>
+</html>

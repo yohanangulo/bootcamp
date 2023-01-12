@@ -5,7 +5,17 @@ $breakpoints: (
 );
 
 @mixin bp ($size) {
+
   @media (max-width: map-get($breakpoints, $size)) {
     @content
   }
+  
 }
+
+
+$breakpoints: (
+  'sm': 600px,
+  'md': 700px,
+  'lg': 900px
+);
+
