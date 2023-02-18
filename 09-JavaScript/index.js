@@ -485,3 +485,51 @@ setTimeout(luego, 3000)
 // Ejecuta una funcion cada cierto tiempo
 
 setInterval(() => console.log('me ejecte') , 2000);
+
+
+// Promesas
+
+let promesa = new Promise((allOk, NotOk)=> {
+  let x = 0;
+  if (x == 0) {
+    allOk()
+  } else {
+    NotOk()
+  }
+})
+
+promesa.then(
+  ()=> console.log('Everything is ok'),
+  ()=> console.log('Not ok')
+)
+
+// Cosas extra
+
+// Se puede ingresas html dentro del html 
+
+document.getElementById('contenido').innerHTML = '<p>hola mundo</p>'
+
+
+// Crear elementos html desde JS
+let elemHtml = document.createElement('p');
+elemHtml.innerHTML = 'creado desde js';
+elemHtml.classList.add('clase-desde-js');
+// elemHtml.style = '' para agregar estilos en linea
+document.getElementById('contenido').appendChild(elemHtml);
+
+
+/*
+1)  Crea un juego de piedra, papel y tijeras. En donde debes ser capaz de seleccionar alguna opcion
+la computadora debe elegir alguna opcion de forma aleatoria, y luego de ello. Decir quien gano.
+Tambien este juego debe contener un historial de los resultados de las ultimas 5 partidas.
+Tambien deben agregarle un contador de cuantas partidas has ganado tu, y cuantas partidas ha ganado
+la computadora
+
+2) Crea un TO-DO List (Lista de tareas por hacer) en donde puedas ingresar tareas, y puedas marcar como
+completadas cada una de estas o eliminarlas
+
+3) Agarra un articulo de la Wikipedia. Copialo dentro de un parrafo o varios parrafos. Y al tope de la pagina
+crea un input que me permita buscar si una palabra o frase existe en el articulo o no.
+
+fecha de entrega: 24 de enero
+*/
