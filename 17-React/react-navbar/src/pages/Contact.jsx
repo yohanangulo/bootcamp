@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <>
       <Navbar />
-      <div className='text-black'>Contact</div>
+      <div className="text-4xl font-bold text-center py-36">Contact</div>
     </>
   )
 }

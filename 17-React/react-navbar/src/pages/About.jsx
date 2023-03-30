@@ -5,7 +5,7 @@ export default function About() {
   return (
     <>
       <Navbar />
-      <div className="text-black">About</div>
+      <div className="text-4xl font-bold text-center py-36">About</div>
     </>
   );
 }

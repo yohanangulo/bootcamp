@@ -5,7 +5,7 @@ export default function Card({content}) {
     <div className='grid grid-cols-4 gap-4 text-black'>
       {content.map((el, i) => {
         return(
-          <div key={i}>
+          <div key={i} className="text-white mx-auto">
           <p>{el.titulo}</p>
           <p>{el.views} views</p>
           </div>

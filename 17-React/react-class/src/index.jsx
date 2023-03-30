@@ -1,4 +1,5 @@
 import React from "react";
+import { BlurhashCanvas } from "react-blurhash";
 import ReactDOM from "react-dom/client";
 import Button from "./components/Button";
 import './resources/css/button.css'
@@ -6,12 +7,10 @@ import './resources/css/button.css'
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-  <>
-    <h1>Hola mundo</h1>
-    <p>titular</p>
-    <Button classes={"main-button"}><p>Hola mundo</p></Button>
-    <Button classes={"alt-button"} text="English" />
-  </>
+  <div>
+    <BlurhashCanvas hash="LEHV6nWB2yk8pyo0adR*.7kCMdnj" width={400} height={300} punch={1} />
+    <img src="https://www.40defiebre.com/wp-content/uploads/2015/10/imagenes.png" alt="" />
+  </div>
 );
 
 /**

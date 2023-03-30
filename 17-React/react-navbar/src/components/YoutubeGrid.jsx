@@ -3,9 +3,11 @@ import Video from "./Video";
 
 export default function YoutubeGrid() {
 
-  const grid = data.map((el) => {
+
+  const grid = data.map((el, i) => {
     return (
       <Video
+        key={i}
         srcImg={el.srcImg}
         timeCount={el.timeCount}
         channelImg={el.channelImg}
@@ -17,9 +19,5 @@ export default function YoutubeGrid() {
     );
   });
 
-  return (
-    <div className="pt-12 videos-row">
-      {grid}
-    </div>
-  );
+  return <div className="pt-12 videos-row">{grid}</div>;
 }

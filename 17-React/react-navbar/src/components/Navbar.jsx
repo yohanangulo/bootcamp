@@ -18,6 +18,12 @@ function Navbar() {
             <Link to="/contact">
               <p>Contact</p>
             </Link>
+            <Link to="/youtube">
+              <p>Youtube</p>
+            </Link>
+            <Link to="/hooks">
+              <p>hooks</p>
+            </Link>
           </Menu>
           <Button classes={"bg-[#61dafb] font-bold"} />
         </div>

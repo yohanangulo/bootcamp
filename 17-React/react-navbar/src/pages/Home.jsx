@@ -13,35 +13,42 @@ export default function Home({ variacion }) {
 
   const info = [
     {
-      titulo: 'Regalo 500$',
-      views: '500.000'
+      titulo: "Regalo 500$",
+      views: "500.000",
     },
     {
-      titulo: 'Nuevo gameplay',
-      views: '3.000'
+      titulo: "Nuevo gameplay",
+      views: "3.000",
     },
     {
-      titulo: 'Nuevo video',
-      views: '10.000'
-    }
+      titulo: "Nuevo video",
+      views: "10.000",
+    },
+    {
+      titulo: "Nuevo video",
+      views: "10.000",
+    },
   ];
 
   if (variacion) {
     return (
       <>
         <Navbar />
-        <div className="text-black">Home</div>
-        <button onClick={event} className="bg-zinc-700 p-2">
-          click me
-        </button>
-        <button
-          onClick={() => {
-            imprimir("hola mundo");
-          }}
-          className="bg-zinc-700 p-2 ml-4"
-        >
-          click me 2
-        </button>
+        <div className="text-4xl font-bold text-center py-36">Home</div>
+
+        <div className="text-center mb-14">
+          <button onClick={event} className="bg-zinc-700 p-2">
+            click me
+          </button>
+          <button
+            onClick={() => {
+              imprimir("hola mundo");
+            }}
+            className="bg-zinc-700 p-2 ml-4"
+          >
+            click me 2
+          </button>
+        </div>
         <Card content={info} />
       </>
     );

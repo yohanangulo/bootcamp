@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "../resources/css/style.css";
 
 export default function Video(props) {
+
+  const [isLoaded, setIsLoaded] = useState(false)
+
+  const handleLoad = () => {
+    console.log('first')
+  }
+
   return (
     <div className="video-container">
       <div className="video">
