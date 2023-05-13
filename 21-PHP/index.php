@@ -1,3 +1,7 @@
+<?php
+session_start(); # para iniciar una sesion
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,6 +13,9 @@
   <style>
     body {
       background: #0f0f0f;
+      color: white;
+    }
+    a {
       color: white;
     }
   </style>
@@ -174,8 +181,102 @@
 
   recursiva(1);
 
+  # arrays, son un lista de elementos
+  # y esto es puede guaradar en usa sola variable
+  # NOTA: los arrays pueden ser de tipo numerico, asociativo, multidimensional
+
+  $carros = ["Chevrolte", "Nissan", "audi"];
+  $numeros = [1, 2, 3, 4, 5];
+  $asociativo = ["nombre" => "yohan", "apellido" => "Angulo"];
+
+  $multidimensional = [
+    ["Chevrolte", "Nissan", "audi"],
+    ["nombre" => "yohan", "apellido" => "Angulo"],
+    [1, 2, 3, 4, 5]
+  ];
+
+  echo "<p>$carros[1]</p>";
+  echo "<p>$numeros[2]</p>";
+  echo "<p>" . $asociativo['nombre'] . "</p>";
+  echo "<p>" . $multidimensional[1]['apellido'] . "</p>";
+
+  # variables globales
+  # las variables globales son aquellas que pueden ser accedidas desde cualquier parte del codigo
+
+  $x = 5;
+  $y = 10;
+
+  function addition() {
+    $GLOBALS['z'] = $GLOBALS['x'] + $GLOBALS['y']; # GLOBLAS es como una especio de variables asociativa donde se guardan todas las variables del codigo
+  }
+
+  addition();
+
+  echo $z; ?>
+
+<!-- con post -->
+  <form action="bienvenida.php" method="post">
+    <label for="nombre">Nombre: </label>
+    <input type="text" id="nombre" autocomplete="off" required name="nombre">
+    <button>Enviar</button>
+  </form>
+  <!-- con get -->
+  <a href="get.php?nombre=Yohan&apellido=Angulo" style="margin-right: 30px;">Click me!</a>
+  <?php
+
+  $nombre = "Jose";
+  $apellido = "Angulo";
+  // echo "<a href='get.php?nombre=$nombre&apellido=$apellido'>Probar con otra ruta GET</a>";
+
+  # variable de sision, se debe ejecutar la funcion de sision antes...
+  # almacenan la informacion en el servidor
+
+  $_SESSION = ["nombre" => $nombre, 'apellido' => $apellido];
+  // se usa session_destroy(); para 'cerrar la sesion'
+
+  echo "<p>Desde una variable de sesion: " . $_SESSION['apellido'] . "</p>";
+
+  # expresiones regulares
+  # las expresiones regurales son patrones que se utilizan para encontrar
+  # una cadena de caractere dentro de otra cadena de caracteres
+
+  $exp = "/Yohan/i";
+
+  if ( preg_match($exp, "Mi nombre es Jose") ) {
+    echo "Se encontro la cadena";
+  } else {
+    echo "No se encontro la cadena";
+  }
+
+  echo "<br>" ;
+
+  # validacion de nombre
+
+  $exp = "/^[a-zA-Z0-9 ]*$/";
   
+  if (preg_match($exp, "Yohan")):
+    echo "si cumple";
+  else:
+    echo "no cumple";
+  endif;
+  echo "<br>";
+
+  #validacion de contrasena
+  $regex = '/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/';
+  if (preg_match($regex, "miContrasena123@")) {
+    echo "La clave si cumple";
+  } else {
+    echo "La clave no cumple";
+  }
+  echo "<br>";
+
+
+  # validacion de correo electronico
+  $exp = "/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.([a-zA-Z]{2,8})$/";
+
+  # crea una expresion regular que valide nombre completo, cedula, numero de telf.
 
   ?>
+
 </body>
 </html>
