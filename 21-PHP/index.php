@@ -275,6 +275,72 @@ session_start(); # para iniciar una sesion
   $exp = "/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.([a-zA-Z]{2,8})$/";
 
   # crea una expresion regular que valide nombre completo, cedula, numero de telf.
+  ?>
+  <form action="" method="post">
+    <label for="name" >Nombre:</label>
+    <input type="text" required id="name" name="name">
+
+    <label for="email" >Email:</label>
+    <input type="text" required id="email" name="email">
+
+    <button>Enviar</button>
+  </form>
+  <?php
+
+  if (isset($_POST['name']) ) {
+    # validacion de la informacion 
+
+    $regex_nombre = "/^[a-zA-Z0-9 ]*$/";
+    $regex_email = "/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.([a-zA-Z]{2,8})$/";
+
+    # siempre hay que validar un formulario SIEMPRE para evitar SQL injection
+
+    if ( preg_match($regex_nombre, $_POST['name']) && preg_match($regex_email, $_POST['email']) ) :
+      echo "<p>Los datos son:</p>";
+      echo $_POST['name'] . '<br>';
+      echo $_POST['email'] . '<br>';
+    else :
+      echo "<p>Hubo un error</p>";
+    endif;
+
+  }
+
+
+
+  # los archivos
+  # los archivos son ustructuras de datos que almacenan informacion
+
+  $my_file = fopen("test.txt", 'w');
+
+  $text = "John Doe\n";
+  
+  fwrite($my_file, $text);
+  fclose($my_file);
+
+  # eliminar un archivo
+  $file = unlink("test.txt");
+  if ($file) {
+    echo "El archivo ha sido eliminado";
+  } else {
+    echo "El archivo no ha sido eliminado";
+  }
+
+  # cookies
+  # las coobies son variables que se almacenan en el navegador del usuario
+  
+  $cookie_name = 'user';
+  $cookie_value = 'John Doe';
+
+  setcookie($cookie_name, $cookie_value, time() + (86400 * 30), '/'); # el ultimo es donde se almacena la cookie
+  if (!isset($_COOKIE[$cookie_name])) {
+    echo "<br >Cookie $cookie_name is not set<br>";
+  } else {
+    echo "<br>Cookie $cookie_name is set<br>";
+    echo 'Value cookie is ' . $_COOKIE[$cookie_name];
+  }
+
+  # MySQL
+  
 
   ?>
 
