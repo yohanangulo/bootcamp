@@ -17,3 +17,5 @@ function clean_input($conn, $data) {
 }
 
 $conn = new mysqli($host, $user, $pass, $database);
+
+if (!$conn) die("Unable to connect to the server");

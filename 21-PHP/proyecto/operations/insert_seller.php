@@ -10,7 +10,7 @@ if (isset($_POST['add_seller'])) {
   $age = clean_input($conn, $_POST['age']);
 
   $query =
-  "INSERT INTO `inventory`.`seller`
+  "INSERT INTO `seller`
   (`name`,
   `lastname`,
   `age`)
