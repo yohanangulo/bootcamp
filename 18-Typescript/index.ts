@@ -18,15 +18,12 @@ carro = {
   marca: "Chevrolet",
   modelo: "Aveo",
 }
-
-
 // declaracion implicita
 
 let nombre = "Yohan"; // como se inicializo como un string ya no se puede cambiar a mas nada.
 
 
 // funciones
-
 function saludar():string {
   return "hola"
 }
@@ -56,5 +53,6 @@ class Persona {
 }
 
 let persona = new Persona("Yohan", " angulo");
+
 
 console.log(persona.saludar())

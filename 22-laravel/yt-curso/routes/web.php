@@ -2,17 +2,20 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CursoController;
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', HomeController::class);
+
+
+// Route::get('/courses', [CursoController::class, 'index']);
+// Route::get('/courses/create', [CursoController::class, 'create']);
+// Route::get('/courses/{course}', [CursoController::class, 'show']);
+
+
+// groupe routes in laravel
+Route::controller(CursoController::class)->group(function () {
+  Route::get('/courses', 'index');
+  Route::get('/courses/create', 'create');
+  Route::get('/courses/{course}', 'show');
 });
