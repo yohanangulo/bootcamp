@@ -17,8 +17,13 @@ class EmpleadoFactory extends Factory
      */
     public function definition(): array
     {
+
+        // en caso de querer agg lista personalizada de nombres
+        $nombres = [ 'Juan', 'Pedro', 'Maria', 'Jose', 'Luis', 'Carlos', 'Ana', 'Luisa', 'Jorge', 'Joaquin', 'Jesús', 'Jesica'];
+
         return [
-            'nombre' => $this->faker->firstName(),
+            'nombre' => $nombres[rand(0, count($nombres) - 1)],
+            // 'nombre' => $this->faker->firstName(),
             'apellido' => $this->faker->lastName(),
             'email' => $this->faker->unique()->safeEmail(),
             'telefono' => $this->faker->phoneNumber(),
