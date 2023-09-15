@@ -7,6 +7,7 @@ use Illuminate\Database\Seeder;
 
 // importa el modulo de empleado
 use App\Models\Empleado;
+use App\Models\product;
 
 class DatabaseSeeder extends Seeder
 {
@@ -16,5 +17,6 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         Empleado::factory(15)->create();
+        product::factory(15)->create();
     }
 }
