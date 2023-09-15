@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class EmpleadoFactory extends Factory
 {
+    // este factory llena de datos falsos la tabla empleados
     /**
      * Define the model's default state.
      *
@@ -17,7 +18,13 @@ class EmpleadoFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'nombre' => $this->faker->firstName(),
+            'apellido' => $this->faker->lastName(),
+            'email' => $this->faker->unique()->safeEmail(),
+            'telefono' => $this->faker->phoneNumber(),
+            'direccion' => $this->faker->address(),
+            'fecha_nacimiento' => $this->faker->date(),
+            'ciudad' => $this->faker->city(),
         ];
     }
 }
