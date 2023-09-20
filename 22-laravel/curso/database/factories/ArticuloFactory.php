@@ -17,8 +17,8 @@ class ArticuloFactory extends Factory
     public function definition(): array
     {
 
-        $productos = ['Mouse', 'Teclado', 'Monitor', 'Cornetas', 'Memoria',];
-        $metodos_de_pago = ['efectivo', 'transferencia', 'tarjeta'];
+        $productos = ['Mouse', 'Teclado', 'Monitor', 'Cornetas', 'Memoria'];
+        $metodos_de_pago = ['efectivo', 'transferencia', 'tarjeta', 'Biopago', 'Pagomovil'];
 
         return [
             'nombre' => $this->faker->randomElement($productos),
@@ -27,7 +27,6 @@ class ArticuloFactory extends Factory
             'stock' => $this->faker->numberBetween(0, 100),
             'codigo' => $this->faker->ean8(),
             'metodo_de_pago' => $this->faker->randomElement($metodos_de_pago),
-            
         ];
     }
 }
