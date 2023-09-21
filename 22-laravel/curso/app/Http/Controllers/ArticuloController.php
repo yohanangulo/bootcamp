@@ -18,9 +18,23 @@ class ArticuloController extends Controller
         ]);
     }
 
-    public function create() {
+    public function create()
+    {
         return 'create an article';
     }
 
     // ruta para cuando se necestia editar un articulo
+    public function edit($id)
+    {
+
+        $articulo = Articulo::findOrFail($id);
+
+        return view('articles.edit', compact('article'));
+    }
+
+    public function delete($id) {
+        $articulo = Articulo::findOrFail($id);
+        $articulo->delete();
+        return redirect()->route('articles.index')->with('mensaje', 'Articulo eliminado');
+    }
 }
