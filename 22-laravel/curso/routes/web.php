@@ -82,7 +82,7 @@ Route::middleware($middleware)->group(function () {
     })->name('dashboard');
 });
 
-Route::get('/prodcuts', );
+Route::get('/prodcuts', ArticuloController::class . '@get_articles' );
 
 /**
  * para crear un modelo se usa
