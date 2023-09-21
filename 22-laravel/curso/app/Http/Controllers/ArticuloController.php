@@ -35,6 +35,13 @@ class ArticuloController extends Controller
     public function delete($id) {
         $articulo = Articulo::findOrFail($id);
         $articulo->delete();
+
         return redirect()->route('articles.index')->with('mensaje', 'Articulo eliminado');
+    }
+
+    public function store(Request $request) {
+        Articulo::crate($request->all());
+
+        return redirect()->route('Articulo.index')->with('success', 'Articulo crade exitosamente');
     }
 }

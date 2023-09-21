@@ -41,7 +41,7 @@
             <a href="{{ route('articulos.edit', $articulo->id) }}"></a>
             <form action="">{{ route('articulos.delete') }}
               @csrf
-              @method('delete')
+              @method('DELETE')
               <button>delete</button>
             </form>
           </td>
