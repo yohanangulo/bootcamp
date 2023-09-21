@@ -14,6 +14,7 @@ class DatabaseSeeder extends Seeder
 {
     /**
      * Seed the application's database.
+     * @hace la llamada a los seeders
      */
     public function run(): void
     {

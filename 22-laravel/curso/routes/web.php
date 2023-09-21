@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ArticuloController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -80,6 +81,8 @@ Route::middleware($middleware)->group(function () {
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::get('/prodcuts', );
 
 /**
  * para crear un modelo se usa
