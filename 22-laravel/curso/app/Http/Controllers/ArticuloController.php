@@ -9,7 +9,13 @@ use App\Models\Articulo;
 
 class ArticuloController extends Controller
 {
-    public function index() {
-        
+    /**
+     * @return homeView
+     */
+    public function index()
+    {
+        $articles = Articulo::all();
+
+        return view('home', ['articles' => $articles]);
     }
 }

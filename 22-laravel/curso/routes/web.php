@@ -7,6 +7,13 @@ use Illuminate\Support\Facades\Route;
 // tambien se encarga de mandar la vista
 use App\Http\Controllers\ArticuloController;
 
-Route::get('/', function () {
-  return view('home');
-});
+/**
+ * @return homeView 
+ */
+Route::get('/', [ArticuloController::class, 'index']);
+
+
+/**
+ * @return articlesView
+ */
+Route::get('/articulos', [ArticuloController::class, 'get_articles'])->name('articulos');
