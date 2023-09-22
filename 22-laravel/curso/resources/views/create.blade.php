@@ -36,7 +36,6 @@
     <input type="text" name="metodoDePago" id="metodo_de_pago_id">
 
     <button>Guardar</button>
-
   </form>
 
 </body>
