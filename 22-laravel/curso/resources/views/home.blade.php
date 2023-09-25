@@ -35,13 +35,13 @@
 
     <thead>
       <tr class="">
-        <th class="">Nombre</th>
-        <th class="">Precio</th>
-        <th class="">Imagen</th>
+        <th class="">Name</th>
+        <th class="">Price</th>
+        <th class="">Image</th>
         <th class="">Stock</th>
-        <th class="">Codigo</th>
-        <th class="">Metodo de pago</th>
-        <th class="">Acciones</th>
+        <th class="">Code</th>
+        <th class="">Payment Method</th>
+        <th class="">Actions</th>
       </tr>
     </thead>
 
