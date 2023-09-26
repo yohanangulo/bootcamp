@@ -14,8 +14,13 @@ class ArticuloController extends Controller
      */
     public function index()
     {
+        return view('home');
+    }
+
+    public function get_articles()
+    {
         $articles = Articulo::all();
 
-        return view('home', ['articles' => $articles]);
+        return view('articulos', ['articles' => $articles]);
     }
 }

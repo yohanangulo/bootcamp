@@ -10,7 +10,7 @@ use App\Http\Controllers\ArticuloController;
 /**
  * @return homeView 
  */
-Route::get('/', [ArticuloController::class, 'index']);
+Route::get('/', [ArticuloController::class, 'index'])->name('home');
 
 
 /**
