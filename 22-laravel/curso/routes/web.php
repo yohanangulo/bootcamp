@@ -26,3 +26,13 @@ Route::get('/articulos/crear', [ArticuloController::class, 'create_article'])->n
  * @return 
  */
 Route::post('/articulos/creado', [ArticuloController::class, 'store_article'])->name('articulos.creado');
+
+/**
+ * formulario para actualizar articulo
+ */
+Route::get('/articulos/editar/{id}', [ArticuloController::class, 'edit_article'])->name('articulos.editar');
+
+/**
+ * actualizar articulo
+ */
+Route::put('/articulos/actualizar/{id}', [ArticuloController::class, 'update_article'])->name('articulos.actualizar');

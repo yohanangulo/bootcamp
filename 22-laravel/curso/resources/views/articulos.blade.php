@@ -66,12 +66,11 @@
           <td class="px-2">{{ $el['metodo_de_pago'] }}</td>
           <td style="padding-inline: 10px;">
             <div class="flex gap-2 py-3">
-              {{-- actualizar --}}
-              <form action="articles/edit/{{ $el->id }} " method="POST">
-                @csrf
-                @method('PUT')
-                <button class="bg-yellow-600 py-1 px-3 text-sm text-white font-semibold rounded-lg">Editar</button>
-              </form>
+              {{-- editar --}}
+                <a
+                  href="{{ route('articulos.editar', ['id' => $el->id]) }}"
+                  class="bg-yellow-600 py-1 px-3 text-sm text-white font-semibold rounded-lg"
+                >Editar</a>
               {{-- borrar --}}
               <form action="articles/delete/{{ $el->id }}" method="POST">
                 @csrf
