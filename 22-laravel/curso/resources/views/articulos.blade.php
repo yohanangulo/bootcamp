@@ -47,7 +47,7 @@
       <tr class="">
         <th class="">Name</th>
         <th class="">Price</th>
-        <th class="">Image</th>
+        {{-- <th class="">Image</th> --}}
         <th class="">Stock</th>
         <th class="">Code</th>
         <th class="">Payment Method</th>
@@ -60,12 +60,12 @@
         <tr>
           <td class="px-2">{{ $el['nombre'] }}</td>
           <td class="px-2">{{ $el['precio'] }}</td>
-          <td class="px-2"><img width="60px" src="{{ $el['imagen'] }}" alt=""></td>
+          {{-- <td class="px-2"><img width="60px" src="{{ $el['imagen'] }}" alt=""></td> --}}
           <td class="px-2">{{ $el['stock'] }}</td>
           <td class="px-2">{{ $el['codigo'] }}</td>
           <td class="px-2">{{ $el['metodo_de_pago'] }}</td>
           <td style="padding-inline: 10px;">
-            <div class="flex gap-2">
+            <div class="flex gap-2 py-3">
               {{-- actualizar --}}
               <form action="articles/edit/{{ $el->id }} " method="POST">
                 @csrf

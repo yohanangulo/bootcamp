@@ -34,9 +34,10 @@ class ArticuloController extends Controller
         return view('articulos.crear');
     }
 
-    public function store_article(Request $request) {
-        echo $request;
-        return 'articulo creado';
+    public function store_article(Request $formData) {
+        Articulo::create($formData->all());
+
+        return redirect()->route('articulos')->with('success', 'Articulo creado correctamente');
     }
 
 }

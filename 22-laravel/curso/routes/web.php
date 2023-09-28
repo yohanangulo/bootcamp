@@ -25,5 +25,4 @@ Route::get('/articulos/crear', [ArticuloController::class, 'create_article'])->n
 /**
  * @return 
  */
-
- Route::post('/articulos/creado', [ArticuloController::class, 'store_article'])->name('articulos.creado');
+Route::post('/articulos/creado', [ArticuloController::class, 'store_article'])->name('articulos.creado');

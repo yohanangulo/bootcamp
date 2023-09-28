@@ -41,10 +41,10 @@
       <input class="block mb-2 w-full rounded-full pl-5" placeholder="Nombre" type="text" name="nombre">
       <input class="block mb-2 w-full rounded-full pl-5" placeholder="Precio" type="number" name="precio">
       <input class="block mb-2 w-full rounded-full pl-5" placeholder="Stock disponible" type="number"
-        name="stockDisponible">
+        name="stock">
       <input class="block mb-2 w-full rounded-full pl-5" placeholder="Codigo" type="text" name="codigo">
       <input class="block mb-8 w-full rounded-full pl-5" placeholder="metodo de pago" type="text"
-        name="metodoDePago">
+        name="metodo_de_pago">
       <button
         class="px-3 bg-slate-800 hover:bg-slate-700 transition-colors font-semibold text-white text-sm rounded-full w-full py-3">Crear</button>
     </form>
