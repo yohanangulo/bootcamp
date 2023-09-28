@@ -12,8 +12,12 @@ use App\Http\Controllers\ArticuloController;
  */
 Route::get('/', [ArticuloController::class, 'index'])->name('home');
 
-
 /**
  * @return articlesView
  */
 Route::get('/articulos', [ArticuloController::class, 'get_articles'])->name('articulos');
+
+/**
+ * @return createArticleView
+ */
+Route::get('/articulos/crear', [ArticuloController::class, 'create_article'])->name('articulos.crear');

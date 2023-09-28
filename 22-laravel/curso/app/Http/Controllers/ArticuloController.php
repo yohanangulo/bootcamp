@@ -17,10 +17,20 @@ class ArticuloController extends Controller
         return view('home');
     }
 
+    /**
+     * @return articlesView
+     */
     public function get_articles()
     {
         $articles = Articulo::all();
 
         return view('articulos', ['articles' => $articles]);
+    }
+
+    /**
+     * @return createArticleView
+     */
+    public function create_article() {
+        return view('articulos.crear');
     }
 }
