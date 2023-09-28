@@ -40,9 +40,28 @@
       @csrf
       @method('PUT')
       <input value="{{$articulo->nombre}}" class="block mb-2 w-full rounded-full pl-5" placeholder="Nombre" type="text" name="nombre">
-      <input step="0.01" value="{{$articulo->precio}}" class="block mb-2 w-full rounded-full pl-5" placeholder="Precio" type="number" name="precio">
-      <input value="{{$articulo->stock}}" class="block mb-2 w-full rounded-full pl-5" placeholder="Stock disponible" type="number"
-        name="stock">
+
+      <input
+        step="0.01"
+        value="{{$articulo->precio}}"
+        class="block mb-2 w-full rounded-full pl-5"
+        placeholder="Precio"
+        type="number"
+        name="precio"
+
+        onkeydown="return event.keyCode !== 69"
+      >
+
+
+      <input
+        value="{{$articulo->stock}}" class="block mb-2 w-full rounded-full pl-5"
+        placeholder="Stock disponible"
+        type="number"
+        name="stock"
+        
+        onkeydown="return event.keyCode !== 69"
+      >
+
       <input value="{{$articulo->codigo}}" class="block mb-2 w-full rounded-full pl-5" placeholder="Codigo" type="text" name="codigo">
       <input value="{{$articulo->metodo_de_pago}}" class="block mb-8 w-full rounded-full pl-5" placeholder="metodo de pago" type="text"
         name="metodo_de_pago">
