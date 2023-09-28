@@ -33,4 +33,10 @@ class ArticuloController extends Controller
     public function create_article() {
         return view('articulos.crear');
     }
+
+    public function store_article(Request $request) {
+        echo $request;
+        return 'articulo creado';
+    }
+
 }

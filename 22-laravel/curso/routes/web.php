@@ -21,3 +21,9 @@ Route::get('/articulos', [ArticuloController::class, 'get_articles'])->name('art
  * @return createArticleView
  */
 Route::get('/articulos/crear', [ArticuloController::class, 'create_article'])->name('articulos.crear');
+
+/**
+ * @return 
+ */
+
+ Route::post('/articulos/creado', [ArticuloController::class, 'store_article'])->name('articulos.creado');

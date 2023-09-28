@@ -67,13 +67,13 @@
           <td style="padding-inline: 10px;">
             <div class="flex gap-2">
               {{-- actualizar --}}
-              <form action="articles/edit/{{ $el->id }} ">
+              <form action="articles/edit/{{ $el->id }} " method="POST">
                 @csrf
                 @method('PUT')
                 <button class="bg-yellow-600 py-1 px-3 text-sm text-white font-semibold rounded-lg">Editar</button>
               </form>
               {{-- borrar --}}
-              <form action="articles/delete/{{ $el->id }}">
+              <form action="articles/delete/{{ $el->id }}" method="POST">
                 @csrf
                 @method('DELETE')
                 <button class="bg-red-500 py-1 px-3 text-sm text-white font-semibold rounded-lg">Borrar</button>

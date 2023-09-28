@@ -26,22 +26,30 @@
   <h1 class="text-center text-white mt-8 mb-14 text-3xl font-bold">Crea un articulo</h1>
 
   <div class="flex gap-2 justify-center pt-4">
-    
-    <a
-      class="py-2 px-3 bg-slate-800 hover:bg-slate-700 transition-colors font-semibold text-white text-sm rounded-lg"
-      href="{{ route('home') }}"
-    >
+
+    <a class="py-2 px-3 bg-slate-800 hover:bg-slate-700 transition-colors font-semibold text-white text-sm rounded-lg"
+      href="{{ route('home') }}">
       Inicio
     </a>
 
   </div>
 
-  <form action="">
-    <div>
-      <label for="">Nombre</label>
-    </div>
-  </form>
-  
+  <div class="max-w-[500px] px-6 mx-auto mt-4">
+    <form action="/articulos/creado" method="POST">
+      @csrf
+      @method('POST')
+      <input class="block mb-2 w-full rounded-full pl-5" placeholder="Nombre" type="text" name="nombre">
+      <input class="block mb-2 w-full rounded-full pl-5" placeholder="Precio" type="number" name="precio">
+      <input class="block mb-2 w-full rounded-full pl-5" placeholder="Stock disponible" type="number"
+        name="stockDisponible">
+      <input class="block mb-2 w-full rounded-full pl-5" placeholder="Codigo" type="text" name="codigo">
+      <input class="block mb-8 w-full rounded-full pl-5" placeholder="metodo de pago" type="text"
+        name="metodoDePago">
+      <button
+        class="px-3 bg-slate-800 hover:bg-slate-700 transition-colors font-semibold text-white text-sm rounded-full w-full py-3">Crear</button>
+    </form>
+  </div>
+
 
 </body>
 
