@@ -47,11 +47,24 @@ class ArticuloController extends Controller
         return view('articulos.editar', ['id' => $id, 'articulo' => $articulo]);
     }
 
+    /**
+     * actualizar articulo
+     */
     public function update_article(Request $formData, $id) {
         $article = Articulo::findOrFail($id);
         $article->update($formData->all());
 
-        return redirect()->route('articulos')->with('success', 'Articulo actualizado correctamente');
+        return redirect()->route('articulos')->with('success', 'Articulo actualizado exitosamente');
+    }
+
+    /**
+     * eliminar articulo
+     */
+    public function delete_article($id) {
+        $article = Articulo::findOrFail($id);
+        $article->delete();
+
+        return redirect()->route('articulos')->with('success', 'Articulo eliminado exitosamente');
     }
 
 }

@@ -36,3 +36,8 @@ Route::get('/articulos/editar/{id}', [ArticuloController::class, 'edit_article']
  * actualizar articulo
  */
 Route::put('/articulos/actualizar/{id}', [ArticuloController::class, 'update_article'])->name('articulos.actualizar');
+
+/**
+ * eliminar articulo
+ */
+Route::delete('/articulos/eliminar/{id}', [ArticuloController::class, 'delete_article'])->name('articulos.eliminar');
