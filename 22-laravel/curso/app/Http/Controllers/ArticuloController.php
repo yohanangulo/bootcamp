@@ -10,7 +10,7 @@ use App\Models\Articulo;
 class ArticuloController extends Controller
 {
     /**
-     * @return homeView
+     * pagina inicial
      */
     public function index()
     {
@@ -18,7 +18,7 @@ class ArticuloController extends Controller
     }
 
     /**
-     * @return articlesView
+     * vista que muestra todos los articulos
      */
     public function get_articles()
     {
@@ -28,18 +28,24 @@ class ArticuloController extends Controller
     }
 
     /**
-     * @return createArticleView
+     * vista para crear articulos
      */
     public function create_article() {
         return view('articulos.crear');
     }
 
+    /**
+     * ruta que guarda todos los datos del formulario
+     */
     public function store_article(Request $formData) {
         Articulo::create($formData->all());
 
         return redirect()->route('articulos')->with('success', 'Articulo creado correctamente');
     }
 
+    /**
+     * formulario para actualizar articulo
+     */
     public function edit_article($id) {
 
         $articulo = Articulo::findOrFail($id);
@@ -66,5 +72,7 @@ class ArticuloController extends Controller
 
         return redirect()->route('articulos')->with('success', 'Articulo eliminado exitosamente');
     }
+
+    
 
 }

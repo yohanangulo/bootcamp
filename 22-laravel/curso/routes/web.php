@@ -40,4 +40,4 @@ Route::put('/articulos/actualizar/{id}', [ArticuloController::class, 'update_art
 /**
  * eliminar articulo
  */
-Route::delete('/articulos/eliminar/{id}', [ArticuloController::class, 'delete_article'])->name('articulos.eliminar');
+Route::get('/articulos/eliminar/{id}', [ArticuloController::class, 'delete_article'])->name('articulos.eliminar');

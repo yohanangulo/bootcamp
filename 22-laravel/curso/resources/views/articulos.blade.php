@@ -26,16 +26,12 @@
   <h1 class="text-center text-white mt-8 mb-14 text-3xl font-bold">Pagina de articulos</h1>
 
   <div class="flex gap-2 justify-center pt-4">
-    <a
-      class="py-2 px-3 bg-slate-800 hover:bg-slate-700 transition-colors font-semibold text-white text-sm rounded-lg"
-      href="{{ route('articulos.crear') }}"
-    >
-    Crear articulo
+    <a class="py-2 px-3 bg-slate-800 hover:bg-slate-700 transition-colors font-semibold text-white text-sm rounded-lg"
+      href="{{ route('articulos.crear') }}">
+      Crear articulo
     </a>
-    <a
-      class="py-2 px-3 bg-slate-800 hover:bg-slate-700 transition-colors font-semibold text-white text-sm rounded-lg"
-      href="{{ route('home') }}"
-    >
+    <a class="py-2 px-3 bg-slate-800 hover:bg-slate-700 transition-colors font-semibold text-white text-sm rounded-lg"
+      href="{{ route('home') }}">
       Inicio
     </a>
 
@@ -67,16 +63,11 @@
           <td style="padding-inline: 10px;">
             <div class="flex gap-2 py-3">
               {{-- editar --}}
-                <a
-                  href="{{ route('articulos.editar', ['id' => $el->id]) }}"
-                  class="bg-yellow-600 py-1 px-3 text-sm text-white font-semibold rounded-lg"
-                >Editar</a>
+              <a href="{{ route('articulos.editar', ['id' => $el->id]) }}"
+                class="bg-yellow-600 py-1 px-3 text-sm text-white font-semibold rounded-lg">Editar</a>
               {{-- borrar --}}
-              <form action="articles/delete/{{ $el->id }}" method="POST">
-                @csrf
-                @method('DELETE')
-                <button class="bg-red-500 py-1 px-3 text-sm text-white font-semibold rounded-lg">Borrar</button>
-              </form>
+              <a href="{{ route('articulos.eliminar', ['id' => $el->id]) }}"
+                class="bg-red-500 py-1 px-3 text-sm text-white font-semibold rounded-lg">Borrar</a>
             </div>
           </td>
         </tr>
