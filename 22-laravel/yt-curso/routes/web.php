@@ -13,9 +13,10 @@ Route::get('/', HomeController::class);
 // Route::get('/courses/{course}', [CursoController::class, 'show']);
 
 
-// groupe routes in laravel
+// groupe routes in laravel when they are managed by the same controller
 Route::controller(CursoController::class)->group(function () {
-  Route::get('/courses', 'index');
-  Route::get('/courses/create', 'create');
-  Route::get('/courses/{course}', 'show');
+  Route::get('/courses', 'index')->name('courses.index');
+  Route::get('/courses/create', 'create')->name('courses.create');
+  Route::post('/courses', 'store')->name('courses.store');
+  Route::get('/courses/{id}', 'show')->name('courses.show');
 });
