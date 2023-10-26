@@ -10,4 +10,10 @@ class Course extends Model
     use HasFactory;
 
     protected $table = 'courses'; // esto es opcional para enlazar un model con la tabla courses
+    // protected $fillable = ['name', 'description', 'category'];
+    protected $guarded = [];
+
+    public function getRouteKeyName() {
+        return 'slug';
+    }
 }
