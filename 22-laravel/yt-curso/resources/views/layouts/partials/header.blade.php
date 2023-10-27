@@ -13,6 +13,11 @@
         </a>
       </li>
       <li>
+        <a href="{{ route('contact_us.index') }}" class="{{ request()->routeIs('contact_us.index') ? 'active' : '' }}">
+          Contact Us
+        </a>
+      </li>
+      <li>
         <a href="{{ route('about') }}" class="{{ request()->routeIs('about') ? 'active' : '' }}">
           About
         </a>

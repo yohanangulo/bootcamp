@@ -7,7 +7,8 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>Email</h1>
-  <p>First Email</p>
+  <h1>Email for {{$data['name']}}</h1>
+  <p><strong>Email:</strong> {{$data['email']}}</p>
+  <p><strong>Message:</strong> {{$data['message']}}</p>
 </body>
 </html>
