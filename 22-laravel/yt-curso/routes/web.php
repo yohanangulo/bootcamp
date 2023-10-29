@@ -44,3 +44,7 @@ Route::view('about', 'about')->name('about');
 
 Route::get('contact-us', [ContactUsController::class, 'index'])->name('contact_us.index');
 Route::post('contact-us', [ContactUsController::class, 'store'])->name('contact_us.store');
+
+Route::get('/test', function () {
+  return 'You accessed successfully';
+})->name('test');
