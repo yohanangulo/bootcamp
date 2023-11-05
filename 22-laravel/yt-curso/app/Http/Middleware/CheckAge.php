@@ -15,6 +15,10 @@ class CheckAge
      */
     public function handle(Request $request, Closure $next): Response
     {
-        return $next($request);
+        if ($request->age > 17) {
+            return $next($request);
+        } else {
+            return redirect('no-authorized');
+        }
     }
 }

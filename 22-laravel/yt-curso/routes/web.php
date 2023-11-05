@@ -47,4 +47,8 @@ Route::post('contact-us', [ContactUsController::class, 'store'])->name('contact_
 
 Route::get('/test', function () {
   return 'You accessed successfully';
-})->name('test');
+})->middleware('age');
+
+Route::get('/no-authorized', function (){
+  return 'Usted no es mayor de edad';
+});
